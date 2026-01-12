@@ -292,6 +292,79 @@ h2 {
 
 .steps__description {
     width: 50%;
+    padding: 32px;
+    margin-left: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+.steps {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+}
+
+.step__number {
+    color: #cbd5e0;
+    font-size: 32px;
+    margin-right: 24px;
+}
+
+.step__para {
+    padding: 16px 0;
+    color: #718096;
+    font-weight: 300;
+}
+
+/* VALUES */
+
+
+#values .row {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    align-items: center;
+}
+
+.values__description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.values__img--wrapper {
+    width: 50%;
+}
+
+.values__img {
+    width: 100%;
+}
+
+.values__cards {
+    display: flex;
+}
+
+#values h3 {
+    position: relative;
+}
+
+#values h3:before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(assets-Treact/briefcase.svg);
+    background-size: contain;
+    border-radius: 50%;
+    background-color: #9ae6b4;
+    margin-right: 8px;
+}
 
