@@ -330,6 +330,7 @@ h2 {
     width: 100%;
     max-width: 1280px;
     align-items: center;
+    gap: 20px;
 }
 
 .values__description {
@@ -350,21 +351,31 @@ h2 {
 
 .values__cards {
     display: flex;
+    gap: 20px;
 }
 
-#values h3 {
-    position: relative;
+.values__card--title-line {
+    display: flex;
+    align-items: center;
 }
 
-#values h3:before {
-    content: "";
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-image: url(assets-Treact/briefcase.svg);
-    background-size: contain;
+.values__icon--wrapper {
+    border: none;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #9ae6b4;
     margin-right: 8px;
 }
+
+.values__icon {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+}
+
+.briefcase {
+    background-color: #feb2b2;
+}
+
 
