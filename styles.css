@@ -68,7 +68,7 @@ nav {
     display: flex;
 }
 
-.nav__row {
+.row__nav {
     display: flex;
     justify-content: space-between;
 }
@@ -93,8 +93,8 @@ nav {
 }
 
 .nav__links {
+    display: flex;
     align-items: center;
-    padding-bottom: 2px;
 }
 
 .nav__link {
@@ -111,6 +111,12 @@ nav {
     margin-top: 2px;
     padding: 10px 32px;
     line-height: 1.5;
+}
+
+.btn__menu {
+    background: transparent;
+    border: none;
+    color: #6415ff;
 }
 
 .menu__backdrop {
@@ -446,6 +452,7 @@ h2 {
 .pricing-plans {
     display: flex;
     max-width: 1280px;
+    width: 100%;
     justify-content: center;
     gap: 24px;
     margin-top: 56px;
@@ -458,6 +465,7 @@ h2 {
     padding: 32px;
     width: calc(100%/3);
     transition: all 300ms ease;
+    position: relative;
 }
 
 .pricing-plan:hover {
@@ -468,7 +476,7 @@ h2 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
 }
 
 .plan__title {
@@ -484,6 +492,7 @@ h2 {
     font-size: 10px;
     font-weight: 600;
     color: #718096;
+    margin-bottom: 16px;
 }
 
 .plan__middle {
@@ -504,7 +513,8 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 8px;
+    gap: 16px;
+    padding: 24px;
 }
 
 .plan__item {
@@ -520,18 +530,62 @@ h2 {
     justify-content: end;
     border-top: 1px solid #dcdee0;
     margin: 0 auto;
-    
 }
 
 .plan__btn {
-    margin: 16px 16px;
+    margin: 32px 16px;
+    margin-top: 40px;
     transition: all 300ms ease;
 }
 
 .plan__btn:hover {
-    background-color: #9565f6;
+    opacity: 0.6;
     cursor: grab;
     transform: translate(1px, -1px);
+}
+
+.plan__stripe {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0.9rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.plan__stripe-1 {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan-1 .plan__btn {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan-2 {
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(129, 150, 241) 100%);
+}
+
+.plan-2 .plan__title,
+.plan-2 .plan__subtitle,
+.plan-2 .plan__price, 
+.plan-2.plan__subtitle,
+.plan-2 .plan__audience,
+.plan-2 .plan__item {
+    color: white;
+}
+
+.plan-2 .plan__btn {
+    background: white;
+    color: #6415ff;
+}
+
+.plan__stripe-3 {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan-3 .plan__btn {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
 
 /* TESTIMONIALS */
@@ -646,8 +700,7 @@ h2 {
 .cta__row--content {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1024px;
+    padding: 0 72px;
 }
 
 .cta__title {
@@ -656,8 +709,6 @@ h2 {
 }
 
 .cta__btn--row {
-    display: flex;
-    margin: 0 auto;
 }
 
 .btn-pink {
@@ -675,25 +726,33 @@ h2 {
 .row__footer {
     background-color: rgb(100, 21, 255);
     margin-bottom: -124px;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer__menus {
     display: flex;
-    flex-wrap: wrap;
-    padding: 48px;
+    justify-content: space-between;
     border-bottom: 2px solid #5c6167;
+    flex-wrap: wrap;
+    padding: 48px 0;
+    width: 100%;
+    max-width: 1280px;
 }
 
 .footer__menu {
-    width: calc(100%/5);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer__links {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    justify-content: space-between;
 }
 
 .footer__links a {
@@ -707,14 +766,17 @@ h2 {
     padding: 24px 0;
     font-size: 14px;
     font-weight: 700;
+    align-items: left;
 }
 
 .footer__bottom {
-    padding: 48px;
+    padding: 48px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    width: 100%;
+    max-width: 1280px;
 }
 
 .footer__logo {
@@ -769,4 +831,14 @@ h2 {
 
 @media (max-width: 550px) {
     
+}
+
+@media (max-width: 1024px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
 }
